@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    .page__content
+        .container
+            .block__right
+                h4 СОЗДАТЬ УЧЕТНУЮ ЗАПИСЬ?
+                form.box(action='/form/add' method='POST')
+                    .inputBox
+                        input.first(type='email' name='email' placeholder='name@gmail.com' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required='')
+                        img(src='e-mail.png' alt='' width='100px')
+                        label
+                            | E-mail
+                    .inputBox
+                        input.first(type='text' name='name' placeholder='name' required='')
+                        img(src='e-mail.png' alt='' width='100px')
+                        label
+                            | Name
+                    .inputBox
+                        input.first(type='password' name='password' maxlength='10' required='')
+                        label Пароль:
+                    .inputBox
+                        input.first(type='password' name='password_repeat' maxlength='10' required='')
+                        label Повторный пароль:
+                    input.btn-1(type='submit' value='🔒 Создать')
+                    br
+                h4 УЖЕ ЗАРЕГИСТРИРОВАНЫ В НАШЕМ МАГАЗИНЕ?
+                form.box(action='/form/login' method='POST')
+                    .inputBox
+                        input.first(type='email' name='email' placeholder='name@gmail.com' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required='')
+                        img(src='e-mail.png' alt='' width='100px')
+                        label
+                            | E-mail
+                    .inputBox
+                        input.first(type='password' name='password' maxlength='10' required='')
+                        label Пароль
+                    a(href='#') Забыли пароль?
+                    input.btn-1(type='submit' value='🔒 Войти')
+                    br

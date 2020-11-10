@@ -1,0 +1,142 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='style.css')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
+    title Document
+  body
+    .main_page
+      header.header
+        .container
+          .header_up.clearfix
+            nav.header_nav
+              a(href='/')
+                | главная
+              a(href='/ipsum_dolor')
+                | Ipsum dolor
+              a(href='/map')
+                | карта сайта
+              a(href='#')
+                | обратная связь
+              a(href='/contact')
+                | контакты
+              a(href='/about')
+                | сотрудничество
+            .header_up_img
+              if !userId
+               a(href='/form')
+                img(src='padlock_2.png' alt='' width='55px')
+            .header_up_select
+              #currency
+                input#faq_2.faq-input(type='checkbox')
+                label.faq-title(for='faq_2')
+                  span $
+                .cur_ul_li
+                  ul
+                    li Dollar
+                    li RUB
+              .header_up__lang
+                a(href='index_EN.html')
+                  img(src='header_flag.png' alt='' width='40px')
+                a(href='')
+                  img(src='header_flag_ru.png' alt='' width='31px')
+              if userId
+                a(href='/form/logout' class='exit')
+                  | выход
+                a(href='/home')
+                  | кабинет пользователя 
+              else 
+                a(href='/form' class='exit')
+                  | вход
+          .header_center
+            .header_center_left
+              img(src='apple_logo.png' alt='' width='52px')
+              h3 Apple
+            .header_center_center
+              form.search(action='http://fe.it-academy.by/TestForm.php' method='post' target='_blank')
+                input.input(type='search' name='' placeholder='поиск')
+                input.submit(type='submit' name='' value='')
+            .header_center_right
+              a(href='basket.html')
+                img(src='basket.png' alt='' width='27px')
+                p
+                  | Корзина:
+                  span  (пусто)
+                img(src='arrow.png' alt='' width='15px')
+      block content
+      footer
+        .container
+          .footer_col
+            .footer__col_1
+              ul
+                li.footer__h4
+                  h4 условия возврата
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+            .footer_col_2
+              ul
+                li.footer__h4
+                  h4 сотрудничество
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+                li
+                  p special
+            .footer_col_3
+              ul
+                li.footer__h4
+                  h4 подписывайтесь на нас
+                li.footer__social
+                  a(href='#')
+                    i.fa.fa-twitter-square
+                    | twitter
+                li.footer__social
+                  a(href='#')
+                    i.fa.fa-facebook-square
+                    | facebook
+                li.footer__social
+                  a(href='#')
+                    i.fa.fa-rss-square
+                    | RSS
+            .footer_col_4
+              ul
+                li.footer__h4
+                  h4 наши контакты
+                li
+                  p Беларусь Минск ул. Независимости 100
+                li
+                  h3 tel +375 29 111 11 11
+          .copyright
+            .copyright__center
+              p
+                | © 2020 Сделал 
+                span Виктор
+              p.tm TM
+    script(src='https://code.jquery.com/jquery-2.2.4.js')
+    script(src='js.js')  

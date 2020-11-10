@@ -1,0 +1,12 @@
+extends layout
+
+block content
+ .page__content
+   .container
+      h2= data.name
+      .text #{data.bio}
+      if (data.url == 'contact') 
+         p КОНТАКТЫ !!!!!!!!!!!!!!
+      else
+         p НЕ КОНТАКТЫ!
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut necessitatibus officiis, quos recusandae aspernatur reprehenderit! Error itaque, voluptas vero debitis magni perspiciatis vitae, totam veniam nobis sunt nostrum culpa et!
