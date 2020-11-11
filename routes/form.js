@@ -42,7 +42,7 @@ router.post('/add', (req, res, next) => {
 });
 //?=================================================================
 router.post('/login', (req, res, next) => {
-  User.findOne({ where: { email: req.body.email, password: req.body.password } })       //!!!!!!!!!!!!!
+  User.findOne({ where: { email: req.body.email, password: req.body.password } })       //!!!!!!!!!!!!!   findOne
     .then(usr => {
       console.log('1++++++++++++++++++++++++++++++++++++++++');
       console.log(usr);

@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var formRouter = require('./routes/form');
 var homeRouter = require('./routes/home');
 var checkAuth = require('./utils/checkAuth');
+var basketRouter = require('./routes/basket')
 //*-----------------
 
 var app = express();
@@ -26,19 +27,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 //---------------
 app.use((req, res, next)=>{
-  res.locals = {                //можем добавить локаль перем с именем userId
-    userId: req.session.user_id, 
-    title: 'iPhoneShop'      
-  }  
-  next()                               
+  res.locals = {                                //можем добавить локаль перем с именем userId
+    userId: req.session.user_id,
+    title: 'iPhoneShop'
+  }
+  next()
 })
-
-
 
 //------jquery
 app.use(express.static(path.join(__dirname, 'node_modules/jquery-ui')));
+//-------------
+app.use('/basket', basketRouter)
 //--------------
 app.use('/form', formRouter);
 //-----------------
