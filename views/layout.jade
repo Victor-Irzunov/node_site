@@ -10,8 +10,10 @@ html(lang='ru')
     link(rel="manifest" href="/site.webmanifest")
     link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
     link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+    script(src='jquery.min.js')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
+    script(src='javascripts/jquery-cookie.js')
+    script(src='javascripts/card.js')
     title MyKurs
   body
     .main_page
@@ -67,11 +69,24 @@ html(lang='ru')
                 input.submit(type='submit' name='' value='')
             .header_center_right
               a(href='/basket')
-                img(src='basket.png' alt='' width='27px')
-                p
-                  | Корзина:
-                  span  (пусто)
-                img(src='arrow.png' alt='' width='15px')
+                table#bascets
+                  tbody
+                      tr.hPb(style='display: none;')
+                        td Выбрано:
+                        td
+                          span#totalGoods 0
+                          |  товаров
+                        td Сумма: ≈ 
+                        td
+                          span#totalPrice 0
+                          |  руб.
+                      tr.hPe(style='display: table-row;')
+                        td(colspan='2') Корзина пуста
+                      tr
+                        td
+                          a#clearBasket(style='display: none;' href='#') Очистить
+                        td
+                          a#checkOut(style='display: none;' href="{{asset('basket')}}") Оформить
       block content
       footer
         .container
@@ -142,5 +157,4 @@ html(lang='ru')
                 | © 2020 Сделал 
                 span Виктор
               p.tm TM
-    script(src='https://code.jquery.com/jquery-2.2.4.js')
     script(src='js.js')  

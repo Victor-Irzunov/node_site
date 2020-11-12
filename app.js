@@ -38,8 +38,10 @@ app.use((req, res, next)=>{
   next()
 })
 
-//------jquery
+//------jquery ui
 app.use(express.static(path.join(__dirname, 'node_modules/jquery-ui')));
+//-------jquery
+app.use(express.static(path.join(__dirname, 'node_modules/jquery/dist')));
 //-------------
 app.use('/basket', basketRouter)
 //--------------
