@@ -24,10 +24,18 @@ router.get('/:url', function (req, res, next) {
   Mytext.findOne({ where: { url: req.params.url } })
     .then(dat => {
       //res.json(data);
-      console.log('_____________routes_________index.js__________________')
+      console.log('_____________routes_________index.js___for______article_________')
       res.render('article', { data: dat })
     })
 })
+
+
+//--------------
+
+
+
+//--------------
+
 
 //! req.body  - post
 //! req.params - get

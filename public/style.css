@@ -1051,6 +1051,36 @@ input[type=search]
 {
 	transform: scale(1.1);
 }
+
+
+
+
+
+
+/*--------node-------------*/
+
+.box__box
+{
+	float: left;
+	margin-top: 30px;
+}
+.data
+{
+	width: 100px;
+}
+.box__btn
+{
+	padding: 10px 10px 10px 10px;
+	margin: 20px 20px 20px 20px;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
 /*---                        card                      ---*/
 .cart
 {
