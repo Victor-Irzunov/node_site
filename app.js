@@ -4,6 +4,7 @@ var session = require('express-session')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cookieParcer = require('cookie-parser');
 //*-----------------
 var indexRouter = require('./routes/index');
 var formRouter = require('./routes/form');
@@ -22,12 +23,11 @@ db.sequelize.sync();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(session({secret: 'secret_world'}));
+app.use(cookieParcer());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 //---------------
 app.use((req, res, next)=>{

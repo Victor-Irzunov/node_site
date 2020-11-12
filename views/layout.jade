@@ -12,8 +12,7 @@ html(lang='ru')
     link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     script(src='jquery.min.js')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
-    script(src='javascripts/jquery-cookie.js')
-    script(src='javascripts/card.js')
+
     title MyKurs
   body
     .main_page
@@ -86,7 +85,7 @@ html(lang='ru')
                         td
                           a#clearBasket(style='display: none;' href='#') Очистить
                         td
-                          a#checkOut(style='display: none;' href="{{asset('basket')}}") Оформить
+                          a#checkOut(style='display: none;' href="/basket") Оформить
       block content
       footer
         .container
@@ -158,3 +157,5 @@ html(lang='ru')
                 span Виктор
               p.tm TM
     script(src='js.js')  
+    script(src='javascripts/jquery-cookie.js')
+    script(src='javascripts/card.js')

@@ -29,8 +29,9 @@ $(document).ready(function () {
 });
 
 
-$('a.addCart').click(function () {
+$('a.addCart').on('click',function () {
     data = $(this).attr('id').split('-');
+    console.log(data);
     addCart(data[1], data[2], 1);
     return false;
 });
