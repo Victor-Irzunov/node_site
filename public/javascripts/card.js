@@ -99,6 +99,6 @@ $('#clearBasket').click(function () {
     $('.hPe').show();
     $(this).hide();
     $('#checkOut').hide();
-    $.jGrowl("Корзина очищена!");
+    // $.jGrowl("Корзина очищена!");
     return false;
 });

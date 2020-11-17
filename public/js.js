@@ -53,3 +53,32 @@ $(document).ready(function () {
 //     clock.textContent = hr + ':' + min + ':' + sec + " " + day;
 // });
 
+//------------------------------
+document.querySelector('.basket').onclick = () => {
+    console.log('===')
+    document.querySelector('#go').classList.add('active')
+}
+document.querySelector('#clearBasket').addEventListener('click', f_2)
+function f_2() {
+    console.log('***')
+    document.querySelector('#go').classList.remove('active')
+}
+
+//-----------------------------------
+const a = document.querySelector('.cookie-box')
+const b = document.querySelector('.ok')
+
+b.addEventListener('click', () => a.style.display = 'none')
+
+let cookies = () => {
+    // if (!Cookies.get('hide-cookie')) {
+        setTimeout(() => {
+            a.style.display = 'block'
+        }, 1000)
+    // }
+
+    Cookies.set('hide-cookie', 'true', {
+        expires: 30
+    })
+}
+cookies()

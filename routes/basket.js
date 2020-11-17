@@ -10,11 +10,12 @@ var router = express.Router();  //включаем маршрутизатор
 
 router.get('/', function (req, res, next) {  //  '/' нет параметра после него
 	var basket = req.cookies.basket.split(',');
-    console.log(basket);
-	res.render('basket', {basket: basket});   //подкл к jade
+	console.log(basket, '``````````````!`````````````basket.js``');
+	res.render('basket', { basket: basket });   //подкл к jade
 })
 module.exports = router;
 
 
 // Split Parce id кол-во
-//по id проверка с БД и ....
+//по id проверка с БД и
+// $ 888.52

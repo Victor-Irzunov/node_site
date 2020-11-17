@@ -67,7 +67,7 @@ html(lang='ru')
                 input.input(type='search' name='' placeholder='поиск')
                 input.submit(type='submit' name='' value='')
             .header_center_right
-              a(href='/basket')
+              a#go(href='/basket')
                 table#bascets
                   tbody
                       tr.hPb(style='display: none;')
@@ -75,10 +75,10 @@ html(lang='ru')
                         td
                           span#totalGoods 0
                           |  товаров
-                        td Сумма: ≈ 
+                        td Сумма:
                         td
                           span#totalPrice 0
-                          |  руб.
+                          |  $
                       tr.hPe(style='display: table-row;')
                         td(colspan='2') Корзина пуста
                       tr

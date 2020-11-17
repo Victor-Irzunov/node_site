@@ -5,6 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cookieParcer = require('cookie-parser');
+let Cookies = require('cookies')
 //*-----------------
 var indexRouter = require('./routes/index');
 var formRouter = require('./routes/form');
