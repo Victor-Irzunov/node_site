@@ -17,5 +17,5 @@ module.exports = router;
 
 
 // Split Parce id кол-во
-//по id проверка с БД и
+//по id проверка с БД 
 // $ 888.52

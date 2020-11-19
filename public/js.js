@@ -68,17 +68,15 @@ function f_2() {
 const a = document.querySelector('.cookie-box')
 const b = document.querySelector('.ok')
 
-b.addEventListener('click', () => a.style.display = 'none')
+// let cookies = () => {
+//     if (!Cookies.get('hide-cookie')) {
+//         setTimeout(() => {
+//             a.style.display = 'block'
+//         }, 1000)
+//     }
 
-let cookies = () => {
-    // if (!Cookies.get('hide-cookie')) {
-        setTimeout(() => {
-            a.style.display = 'block'
-        }, 1000)
-    // }
-
-    Cookies.set('hide-cookie', 'true', {
-        expires: 30
-    })
-}
-cookies()
+//     Cookies.set('hide-cookie', 'true', {
+//         expires: 30
+//     })
+// }
+// cookies()

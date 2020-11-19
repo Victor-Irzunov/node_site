@@ -156,6 +156,9 @@ block content
                     a.basket.rotate-center.addCart(href='#', id="good-#{item.id}-#{item.price}")
                       i.fa.fa-shopping-cart(aria-hidden='true')
                       span.bas в корзину
-        .cookie-box 
-          p &#10132; &#10132; Саша здесь должен быть Cookie!!!!!!!!!!! 	&#9754;	&#9754;	&#9754; &#9754; &#9754; &#9754; &#9754;
-          button.ok Принять
+        if cook
+         | slovo
+        else              
+         .cookie-box 
+           p &#10132; &#10132; Саша здесь должен быть Cookie!!!!!!!!!!! 	&#9754;	&#9754;	&#9754; &#9754; &#9754; &#9754; &#9754;
+           a.ok(href="/cookie/add") Принять
